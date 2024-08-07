@@ -1,0 +1,33 @@
+# This is a basic Python script demonstrating several commands and concepts.
+
+# Function to print a welcome message
+def welcome_message():
+    print("Welcome to the Python program!")
+    
+# Function to calculate the factorial of a number
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+# Main part of the script
+if __name__ == "__main__":
+    # Print a welcome message
+    welcome_message()
+    
+    # Get user input
+    user_input = input("Enter a number to calculate its factorial: ")
+    
+    try:
+        # Convert input to an integer
+        number = int(user_input)
+        
+        if number < 0:
+            print("Please enter a non-negative integer.")
+        else:
+            # Calculate and print the factorial
+            result = factorial(number)
+            print(f"The factorial of {number} is {result}.")
+    except ValueError:
+        print("Invalid input. Please enter an integer.")
